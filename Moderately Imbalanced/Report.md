@@ -1,5 +1,6 @@
 Report on Iris Dataset Classification with Imbalance Handling
-To analyze the performance of various machine learning models on the Iris dataset, focusing on the impact of class imbalance and different imbalance handling techniques, I followed these steps:
+
+Work flow:
 1.	Data Loading and Preprocessing: Loads the Iris dataset, handles missing values, converts data types, removes duplicates, and identifies and handles outliers.
 2.	Exploratory Data Analysis: Visualizes data distribution and correlations between features using box plots, pair plots, and heatmaps.
 3.	Feature Selection: Selects two features ('sepal_width' and 'petal_width') for classification due to their relatively lower correlation with other features, reducing redundancy and potential overfitting.
@@ -10,8 +11,8 @@ The following are my achieved  results of various machine learning models and im
 
 
 Results and Analysis
+
 1.	Slightly Imbalanced Dataset:
- 
 Summary for Slightly Imbalanced Dataset
 •	Best Models: SVM and Decision Tree.
 •	Recommended Techniques: Random Oversampling and SMOTE (k=3).
@@ -21,27 +22,7 @@ o	Decision Tree achieved 90% accuracy with Random Oversampling and SMOTE.
 o	Logistic Regression performed well with 83.33% to 90% accuracy, depending on the technique used.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 2.	Moderately Imbalanced Dataset:
- 
-
 Summary for Moderately Imbalanced Dataset
 •	Best Models: Logistic Regression and SVM.
 •	Recommended Techniques: SMOTE (k=3) and Random Oversampling.
@@ -51,27 +32,7 @@ o	SVM performed consistently with 90-91% accuracy across multiple techniques.
 o	Random Forest achieved up to 86% accuracy but was less consistent on minority class predictions.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 3.	Severely Imbalanced Dataset:
- 
-
-
-
 Summary for Slightly Imbalanced Dataset
 •	Best Models: SVM and Decision Tree
 •	Recommended Techniques: Random Oversampling and SMOTE (k=3)
@@ -79,5 +40,4 @@ Summary for Slightly Imbalanced Dataset
 o	SVM achieved 93.33% accuracy with Random Oversampling.
 o	Decision Tree achieved 90% accuracy with both Random Oversampling and SMOTE.
 o	Logistic Regression delivered consistent performance, ranging from 83.33% to 90% accuracy, depending on the imbalance handling method.
-![image](https://github.com/user-attachments/assets/5280e4cc-33cd-41c9-aba0-ccfb8a17bfa0)
 
