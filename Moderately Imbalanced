@@ -7,8 +7,17 @@
         "colab_type": "text"
       },
       "source": [
-        "<a href=\"https://colab.research.google.com/github/shreyadata804/model-training-imbalance/blob/water_quality_prediction/Moderately%20Imbalanced/water_quality_moderately_imbalanced_prep.ipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+        "<a href=\"https://colab.research.google.com/github/shreyadata804/model-training-imbalance/blob/water_quality_prediction/Moderately%20Imbalanced\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
       ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 1. Importing Libraries and Tools"
+      ],
+      "metadata": {
+        "id": "hO8mtdARqLGs"
+      }
     },
     {
       "cell_type": "code",
@@ -50,6 +59,15 @@
         "from imblearn.over_sampling import SMOTE, RandomOverSampler, BorderlineSMOTE\n",
         "from imblearn.under_sampling import RandomUnderSampler, TomekLinks, ClusterCentroids, NearMiss"
       ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 2. Loading Dataset from Google Drive"
+      ],
+      "metadata": {
+        "id": "BrLU8903qsoh"
+      }
     },
     {
       "cell_type": "code",
@@ -114,6 +132,15 @@
         "# Display the first few rows\n",
         "print(water_quality_df.head())"
       ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 3. Data Understanding"
+      ],
+      "metadata": {
+        "id": "Q-Lv6bLWrEp2"
+      }
     },
     {
       "cell_type": "code",
@@ -723,6 +750,15 @@
       ]
     },
     {
+      "cell_type": "markdown",
+      "source": [
+        "## 4. Data Cleaning"
+      ],
+      "metadata": {
+        "id": "g7jaEsRArNTB"
+      }
+    },
+    {
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
@@ -1202,6 +1238,15 @@
       ]
     },
     {
+      "cell_type": "markdown",
+      "source": [
+        "## 5. EDA: Class Distribution Analysis"
+      ],
+      "metadata": {
+        "id": "Ti1_LEZfuihq"
+      }
+    },
+    {
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
@@ -1302,6 +1347,15 @@
         "plt.ylabel('Count')\n",
         "plt.show()"
       ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 6. Simulating Imbalanced Datasets (70/30, 80/20, 95/5)"
+      ],
+      "metadata": {
+        "id": "xLWCJPRhun71"
+      }
     },
     {
       "cell_type": "code",
@@ -1465,7 +1519,7 @@
         "id": "LGNcXP-XIb47"
       },
       "source": [
-        "### Baseline Model"
+        "## 7. First Baseline Model Evaluation using Stratified K-Fold (Dummy Classifier)"
       ]
     },
     {
@@ -1589,6 +1643,15 @@
       ]
     },
     {
+      "cell_type": "markdown",
+      "source": [
+        "## 8. Data Cleaning"
+      ],
+      "metadata": {
+        "id": "oB250qJjxNZR"
+      }
+    },
+    {
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
@@ -1648,6 +1711,15 @@
           "execution_count": 135
         }
       ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Validating Logical Constraints"
+      ],
+      "metadata": {
+        "id": "oTwWv2DAxYiS"
+      }
     },
     {
       "cell_type": "code",
@@ -1834,6 +1906,15 @@
           "execution_count": 138
         }
       ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Outlier Detection and Capping (IQR Method)"
+      ],
+      "metadata": {
+        "id": "vODdHyULxhX1"
+      }
     },
     {
       "cell_type": "code",
@@ -2310,6 +2391,15 @@
       ]
     },
     {
+      "cell_type": "markdown",
+      "source": [
+        "## 9. Recreating Imbalanced Datasets After Cleaning (70/30, 80/20, 95/5)"
+      ],
+      "metadata": {
+        "id": "51P2saerx6A1"
+      }
+    },
+    {
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
@@ -2416,7 +2506,7 @@
         "id": "JU8JusSipyzt"
       },
       "source": [
-        "### Split the dataset"
+        "## 10. Data Preprocessing"
       ]
     },
     {
@@ -2498,6 +2588,15 @@
         "X_train[numerical_columns] = scaler.fit_transform(X_train[numerical_columns])  # Fit on train set\n",
         "X_test[numerical_columns] = scaler.transform(X_test[numerical_columns])  # Transform test set"
       ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 11. Second Baseline Model Evaluation – Cleaned Dataset with Stratified K-Fold"
+      ],
+      "metadata": {
+        "id": "tFYs8il9ypiB"
+      }
     },
     {
       "cell_type": "code",
@@ -2611,6 +2710,15 @@
         "plt.tight_layout()\n",
         "plt.show()"
       ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 12. Saving Preprocessed Data and Transformers"
+      ],
+      "metadata": {
+        "id": "vmlO81c0y0Vw"
+      }
     },
     {
       "cell_type": "code",
